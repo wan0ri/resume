@@ -1,6 +1,6 @@
----
 layout: default
 title: 職務経歴書
+updated: 2026-01-10
 ---
 
 ## 基本情報

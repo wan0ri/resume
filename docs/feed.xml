@@ -1,0 +1,29 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <description>{{ site.description | xml_escape }}</description>
+    <language>{{ site.lang | default: "ja" }}</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll Custom Feed</generator>
+
+    {% assign resume = site.pages | where: "name", "index.md" | first %}
+    {% if resume %}
+    {% assign updated = resume.updated | default: resume.date | default: site.time %}
+    <item>
+      <title>{{ resume.title | default: site.title }}（更新: {{ updated | date: "%Y-%m-%d" }}）</title>
+      <link>{{ site.url }}{{ site.baseurl }}{{ resume.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ resume.url }}</guid>
+      <pubDate>{{ updated | date_to_rfc822 }}</pubDate>
+      <description><![CDATA[
+{{ site.description }}
+      ]]></description>
+    </item>
+    {% endif %}
+  </channel>
+</rss>
