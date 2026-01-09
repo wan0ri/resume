@@ -7,16 +7,27 @@ title: 詳細の職務経歴書
 
 ### 【クラウド / インフラ】
 
-- AWS（4年）
-  - EC2 / VPC / ALB / IAM / S3 / RDS / Lambda / CloudWatch
-  - ECS（実務）
-  - CloudFormation（自動構築・テンプレート化）
+- AWS（実務 4 年）
+  - Compute / Container: `EC2`, `ECS(Fargate)`, `Lambda`, `ECR`
+  - Networking / DNS / LB: `VPC`, `ALB`, `Route 53`
+  - Storage / DB / Cache: `S3`, `EFS`, `RDS`, `ElastiCache`
+  - Security / Identity: `IAM`, `IAM Identity Center`, `KMS`, `WAF`, `Secrets Manager`
+  - Integration / Messaging: `EventBridge`
+  - Monitoring / Audit: `CloudWatch`, `CloudTrail`
+  - Governance / Cost / Migration: `Control Tower`, `Billing and Cost Management`, `DMS`
+  - （IaC は下記「【IaC】」参照: `CloudFormation`）
+
+- Google Cloud（個人学習）
+  - Compute / Serverless: `Cloud Run`, `Cloud Run Jobs`, `Cloud Functions`, `Compute Engine`
+  - Storage / DB: `Cloud Storage`, `Cloud SQL`, `Bigtable`
+  - Networking / DNS: `Cloud DNS`
+  - Messaging: `Pub/Sub`
+  - Observability: `Cloud Logging`, `Cloud Monitoring`
+  - IAM / Billing: `IAM`, `Billing`
 
 ### 【コンテナ】
 
 - Docker（実務）
-- ECS（実務）
-- ECR
 
 ※EKSは学習中
 
@@ -101,6 +112,7 @@ title: 詳細の職務経歴書
   - ECS クラスターのパラメータ設計、タスク定義作成、ヘルスチェック設定
   - 保険システムの高可用性要件を満たすため、マルチ AZ 配置とヘルスチェック間隔を 30 秒に設定
   - ECR リポジトリ作成、Java アプリケーションのコンテナイメージ管理設計
+  - DMSを使用し、オンプレミス環境のデータベースの移行前評価とDMSの実行
 
 - 共有ファイルシステム設計
   - AWS EFS の設計・構築、アプリケーションログ出力用ディレクトリ構成設計
@@ -122,7 +134,7 @@ title: 詳細の職務経歴書
 
 **定量的成果**
 
-- プロジェクトで 4 つのショットに分けられたもので、2 ショット分の全環境 AWS 環境構築完了
+- プロジェクトで 4 つのショットに分けられたもので、3 ショット分の全環境 AWS 環境構築完了
 - 構築プロセス標準化により、チーム全体の作業効率が約 40%向上
 - CI/CD 自動化により、デプロイ作業時間を 67%短縮（30 分 →10 分）
 - ドキュメント整備により、新規参画メンバーの立ち上がり期間を 2 週間から 1 週間に短縮
